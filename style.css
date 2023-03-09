@@ -546,8 +546,13 @@ p {
 .cards-lists {
   display: block;
 }
+.cards-link:hover .overley,
+.cards-link:focus .overley {
+  transform: translate(0, 0);
+}
 .cards-lists-wrapper {
   position: relative;
+  overflow: hidden;
 }
 .overley {
   font-size: 16px;
@@ -561,6 +566,8 @@ p {
   padding-left: 32px;
   /* width: 296px;
   height: 96px; */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(0, 100%);
   position: absolute;
   left: 0;
   top: 0;
