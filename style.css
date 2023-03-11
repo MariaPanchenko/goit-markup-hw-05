@@ -44,8 +44,8 @@ body {
   padding-right: 15px;
 }
 .header-main {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
   border-bottom: 1px solid var(--border-cards);
 }
 
@@ -96,6 +96,7 @@ body {
 }
 
 .header-link {
+  display: inline-block;
   position: relative;
   text-decoration: none;
   color: var(--main-color);
@@ -103,6 +104,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link:hover,
 .header-link:focus {
@@ -130,6 +132,7 @@ body {
 .header-mail {
   color: var(--title-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-mail:hover,
 .header-mail:focus {
@@ -139,6 +142,7 @@ body {
 .header-tel {
   color: var(--title-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-tel:hover,
 .header-tel:focus {
@@ -160,6 +164,7 @@ body {
     url('./images/people-office1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .sec-header {
@@ -190,6 +195,7 @@ body {
   border-radius: 4px;
 
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sec-button:hover,
 .sec-button:focus {
@@ -345,6 +351,7 @@ p {
   height: 40px;
   border-radius: 50%;
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-link:hover,
 .team-social-link:focus {
@@ -382,9 +389,11 @@ p {
   border: 1px solid #8e8f99;
   color: var(--color-icon-customer);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-icon {
   fill: currentColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -421,6 +430,7 @@ p {
   height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -506,6 +516,9 @@ p {
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-button:hover,
 .list-button:focus {
@@ -540,6 +553,7 @@ p {
   text-decoration: none;
   display: inline-block;
   line-height: 0;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cards-decor:hover,
@@ -563,6 +577,9 @@ p {
 }
 .cards-lists {
   display: block;
+}
+.cards-link {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cards-link:hover .overley,
 .cards-link:focus .overley {
@@ -604,6 +621,7 @@ p {
   height: 100%;
   z-index: 100;
   background-color: rgba(46, 47, 66, 0.4);
+  opacity: 1;
 
   transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -617,6 +635,7 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
+  opacity: 1;
   transform: translate(-50%, -50%);
   width: 408px;
   height: 576px;
@@ -624,6 +643,8 @@ p {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-window-close {
   position: absolute;
@@ -639,11 +660,15 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-window-close:hover,
 .modal-window-close:focus {
   background-color: var(--hover-button);
   border: none;
+}
+.modal-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-window-close:hover .modal-icon,
 .modal-window-close:focus .modal-icon {
